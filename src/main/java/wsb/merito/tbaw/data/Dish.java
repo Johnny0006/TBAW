@@ -1,5 +1,6 @@
 package wsb.merito.tbaw.data;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,6 +23,7 @@ public class Dish {
     private String description;
     private double price;
     @ManyToMany
+    @JsonIgnore
     private List<Order> orders;
     private String category;
     private boolean isVegetarian;

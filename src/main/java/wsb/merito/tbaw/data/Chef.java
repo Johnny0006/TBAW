@@ -1,5 +1,7 @@
 package wsb.merito.tbaw.data;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,7 +24,8 @@ public class Chef {
     private String name;
     private String specialization;
     private int experienceYears;
-    @OneToMany
+    @OneToMany(mappedBy = "chef")
+    @JsonIgnore
     private List<Order> realizedOrders;
 
 }
