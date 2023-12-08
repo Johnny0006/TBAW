@@ -33,11 +33,13 @@ public class ChefController {
 
     @PostMapping
     public ResponseEntity<Void> create(@RequestBody Chef chef){
+        service.save(chef);
         return ResponseEntity.created(ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(chef.getId()).toUri()).build();
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<Chef> update(@RequestBody Chef chef, @PathVariable int id){
+        chef.setId(id);
         return service.find(id).map(value -> ResponseEntity.ok(service.save(chef))).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
