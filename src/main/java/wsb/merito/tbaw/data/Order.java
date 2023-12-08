@@ -15,14 +15,14 @@ import java.util.List;
 public class Order {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int tableNumber;
     private String orderTime;
     private String status;
     @ManyToMany
     @JoinTable(
-            name = "order_dishes",
+            name = "tbaw_order_dishes",
             joinColumns = @JoinColumn(name = "order_id"),
             inverseJoinColumns = @JoinColumn(name = "dish_id"))
     private List<Dish> dishes;
