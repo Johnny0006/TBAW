@@ -2,10 +2,10 @@ package wsb.merito.tbaw.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import wsb.merito.tbaw.data.Dish;
 import wsb.merito.tbaw.repository.DishRepository;
 
-import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 

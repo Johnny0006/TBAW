@@ -1,15 +1,12 @@
 package wsb.merito.tbaw.data;
 
+import jakarta.persistence.*;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import java.util.List;
 
 @Entity
-@Table
+@Table(name = "tbaw_dish")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -24,7 +21,8 @@ public class Dish {
     private String name;
     private String description;
     private double price;
-    private List<String> ingredients;
+    @ManyToMany
+    private List<Order> orders;
     private String category;
     private boolean isVegetarian;
 

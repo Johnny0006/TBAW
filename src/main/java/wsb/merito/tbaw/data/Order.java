@@ -1,15 +1,11 @@
 package wsb.merito.tbaw.data;
 
+import jakarta.persistence.*;
 import lombok.*;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import java.util.List;
 
 @Entity
-@Table
+@Table(name = "tbaw_order")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -24,7 +20,15 @@ public class Order {
     private int tableNumber;
     private String orderTime;
     private String status;
+    @ManyToMany
+    @JoinTable(
+            name = "order_dishes",
+            joinColumns = @JoinColumn(name = "order_id"),
+            inverseJoinColumns = @JoinColumn(name = "dish_id"))
     private List<Dish> dishes;
+    @ManyToOne
+    @JoinColumn(name="chef_id")
+    private Chef chef;
     private double totalAmount;
 
 }

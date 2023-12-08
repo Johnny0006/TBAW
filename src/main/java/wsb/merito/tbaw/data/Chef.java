@@ -1,15 +1,13 @@
 package wsb.merito.tbaw.data;
 
+import jakarta.persistence.*;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
 import java.util.List;
 
 @Entity
-@Table
+@Table(name = "tbaw_chef")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -24,6 +22,7 @@ public class Chef {
     private String name;
     private String specialization;
     private int experienceYears;
+    @OneToMany
     private List<Order> realizedOrders;
 
 }
