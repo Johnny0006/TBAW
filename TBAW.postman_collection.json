@@ -13,7 +13,13 @@
 					"name": "getChefs",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TBAWtoken}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "localhost:8080/api/chefs",
 							"host": [
@@ -32,7 +38,13 @@
 					"name": "getChef",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TBAWtoken}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "localhost:8080/api/chefs/1",
 							"host": [
@@ -52,7 +64,13 @@
 					"name": "createChef",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TBAWtoken}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"name\": \"Chef Sarah\",\r\n  \"specialization\": \"Mediterranean Cuisine\",\r\n  \"experienceYears\": 15,\r\n  \"realizedOrders\": []\r\n}",
@@ -80,7 +98,13 @@
 					"name": "updateChef",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TBAWtoken}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"name\": \"Chef Sarah\",\r\n  \"specialization\": \"Mediterranean Cuisine\",\r\n  \"experienceYears\": 10,\r\n  \"realizedOrders\": []\r\n}",
@@ -109,7 +133,13 @@
 					"name": "deleteChef",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TBAWtoken}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "",
@@ -143,7 +173,13 @@
 					"name": "getDishes",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TBAWtoken}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "localhost:8080/api/dishes",
 							"host": [
@@ -162,7 +198,13 @@
 					"name": "getDish",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TBAWtoken}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "localhost:8080/api/dishes/1",
 							"host": [
@@ -182,7 +224,13 @@
 					"name": "createDish",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TBAWtoken}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"name\": \"Vegetarian Stir-Fry\",\r\n  \"description\": \"Assorted vegetables stir-fried\",\r\n  \"price\": 14.25,\r\n  \"orders\": [],\r\n  \"category\": \"Main Course\",\r\n  \"isVegetarian\": true\r\n}",
@@ -210,7 +258,13 @@
 					"name": "updateDish",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TBAWtoken}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"name\": \"Vegetarian Stir-Fry\",\r\n  \"description\": \"Assorted vegetables stir-fried\",\r\n  \"price\": 10.50,\r\n  \"orders\": [],\r\n  \"category\": \"Main Course\",\r\n  \"isVegetarian\": true\r\n}",
@@ -239,7 +293,13 @@
 					"name": "deleteDish",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TBAWtoken}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "",
@@ -273,7 +333,13 @@
 					"name": "getOrders",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TBAWtoken}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "localhost:8080/api/orders",
 							"host": [
@@ -292,7 +358,13 @@
 					"name": "getOrder",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TBAWtoken}}",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "localhost:8080/api/orders/1",
 							"host": [
@@ -312,7 +384,13 @@
 					"name": "createOrder",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TBAWtoken}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"tableNumber\": 2,\r\n  \"orderTime\": \"2023-01-02 18:45:00\",\r\n  \"status\": \"Completed\",\r\n  \"dishes\": [\r\n    {\r\n      \"id\": 2\r\n    },\r\n    {\r\n      \"id\": 3\r\n    }\r\n  ],\r\n  \"chef\": {\r\n    \"id\": 2\r\n  },\r\n  \"totalAmount\": 55.25\r\n}",
@@ -340,7 +418,13 @@
 					"name": "updateOrder",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TBAWtoken}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"tableNumber\": 5,\r\n  \"orderTime\": \"2023-01-02 18:45:00\",\r\n  \"status\": \"Completed\",\r\n  \"dishes\": [\r\n    {\r\n      \"id\": 4\r\n    },\r\n    {\r\n      \"id\": 3\r\n    }\r\n  ],\r\n  \"chef\": {\r\n    \"id\": 2\r\n  },\r\n  \"totalAmount\": 55.25\r\n}",
@@ -369,7 +453,13 @@
 					"name": "deleteOrder",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TBAWtoken}}",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "",
@@ -395,6 +485,84 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "login admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"TBAWtoken\", \"Bearer \"+responseBody);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"TBAWtoken\", \"Bearer \"+responseBody);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"user\",\r\n    \"password\": \"user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
