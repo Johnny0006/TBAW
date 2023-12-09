@@ -39,9 +39,9 @@ public class SecurityConfig{
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(request -> request.requestMatchers("/api/login").permitAll()
-                        .requestMatchers("/api/dishes*").permitAll()
-                        .requestMatchers("/api/chefs*").hasAnyAuthority(Role.ADMIN.name())
-                        .requestMatchers("/api/orders*").hasAnyAuthority(Role.ADMIN.name(),Role.USER.name()))
+                        .requestMatchers("/api/dishes", "api/dishes/*").permitAll()
+                        .requestMatchers("/api/chefs", "/api/chefs/*").hasAnyAuthority(Role.ADMIN.name())
+                        .requestMatchers("/api/orders", "/api/orders/*").hasAnyAuthority(Role.ADMIN.name(),Role.USER.name()))
                 .sessionManagement(manager -> manager.sessionCreationPolicy(STATELESS))
                 .authenticationProvider(authenticationProvider()).addFilterBefore(
                         AuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
